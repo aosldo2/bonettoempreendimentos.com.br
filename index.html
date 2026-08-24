@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonetto Empreendimentos - Construindo o Futuro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Work+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Work Sans', 'sans-serif'], display: ['Teko', 'sans-serif'] },
+                    colors: { constr: { dark: '#111827', gold: '#d4af37', gray: '#f3f4f6', iron: '#4b5563' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .geometric-bg { background-image: linear-gradient(135deg, #111827 25%, transparent 25%), linear-gradient(225deg, #111827 25%, transparent 25%), linear-gradient(45deg, #111827 25%, transparent 25%), linear-gradient(315deg, #111827 25%, #1a2235 25%); background-position: 10px 0, 10px 0, 0 0, 0 0; background-size: 20px 20px; background-repeat: repeat; }
+        .modal { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .modal.active { opacity: 1; pointer-events: auto; }
+        .modal-content { transform: translateY(-50px); transition: transform 0.4s; }
+        .modal.active .modal-content { transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-white text-constr-dark antialiased selection:bg-constr-gold selection:text-white overflow-x-hidden">
+
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b-4 border-constr-gold">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="font-display text-5xl uppercase tracking-tighter leading-none flex items-center">
+                BONETTO<span class="text-constr-gold">.</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-bold text-sm tracking-widest uppercase text-constr-iron">
+                <a href="#projetos" class="hover:text-constr-gold transition">Projetos</a>
+                <a href="#sobre" class="hover:text-constr-gold transition">A Empresa</a>
+                <button onclick="document.getElementById('modal-login').classList.add('active')" class="hover:text-constr-gold transition">Portal do Cliente</button>
+                <button onclick="document.getElementById('modal-cad').classList.add('active')" class="bg-constr-dark text-white px-8 py-3 hover:bg-constr-gold transition">Fale com Corretor</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sec 1: Hero -->
+    <section class="relative h-screen flex items-center mt-10">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Obra e Construção" class="w-full h-full object-cover filter brightness-50" />
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full" data-aos="fade-up">
+            <div class="bg-constr-gold text-constr-dark font-bold text-xs uppercase tracking-widest px-4 py-1 inline-block mb-6">Tradição & Inovação</div>
+            <h1 class="font-display text-7xl md:text-9xl uppercase text-white leading-[0.8] mb-6">
+                Construindo <br>O Seu <span class="text-transparent bg-clip-text bg-gradient-to-r from-constr-gold to-yellow-200">Legado.</span>
+            </h1>
+            <p class="text-gray-300 max-w-xl text-lg mb-10 border-l-4 border-constr-gold pl-4 font-light">
+                Há mais de 10 anos desenvolvendo empreendimentos imobiliários e loteamentos inteligentes que valorizam com o tempo. Solidez que você pode confiar.
+            </p>
+            <a href="#projetos" class="inline-block bg-white text-constr-dark font-bold uppercase tracking-widest px-10 py-4 hover:bg-constr-gold hover:text-white transition shadow-xl">
+                Conhecer Empreendimentos
+            </a>
+        </div>
+        
+        <div class="absolute bottom-0 right-0 bg-constr-gold p-6 text-constr-dark w-64 hidden md:block">
+            <div class="font-display text-5xl font-bold mb-1">150+</div>
+            <div class="text-xs uppercase tracking-widest font-bold">Obras Entregues</div>
+        </div>
+    </section>
+
+    <!-- Sec 2: Obras Grid -->
+    <section id="projetos" class="py-24 bg-constr-gray">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16" data-aos="fade-up">
+                <div>
+                    <h2 class="font-display text-5xl uppercase text-constr-dark">Projetos em Destaque</h2>
+                    <p class="text-constr-iron mt-2">Investimentos seguros com alta rentabilidade.</p>
+                </div>
+                <button onclick="document.getElementById('modal-cad').classList.add('active')" class="hidden md:block font-bold text-sm uppercase tracking-widest border-b-2 border-constr-dark pb-1 hover:text-constr-gold hover:border-constr-gold transition">Ver todos</button>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Projeto 1 -->
+                <div class="group relative bg-white shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Mansão" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+                        <div class="absolute top-4 left-4 bg-constr-dark text-white text-xs font-bold uppercase px-3 py-1">Lançamento</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display text-4xl uppercase mb-2">Residencial Imperial</h3>
+                        <p class="text-constr-iron text-sm mb-6 line-clamp-2">Loteamento fechado de alto padrão com infraestrutura completa de lazer e segurança 24h. Lotes a partir de 450m².</p>
+                        <button onclick="document.getElementById('modal-cad').classList.add('active')" class="w-full border-2 border-constr-dark text-constr-dark font-bold uppercase py-3 hover:bg-constr-dark hover:text-white transition">Receber Book</button>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="group relative bg-white shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Predio" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+                        <div class="absolute top-4 left-4 bg-constr-gold text-constr-dark text-xs font-bold uppercase px-3 py-1">Pronto para Morar</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display text-4xl uppercase mb-2">Bonetto Corporate</h3>
+                        <p class="text-constr-iron text-sm mb-6 line-clamp-2">Salas comerciais no novo polo de negócios da cidade. Fachada em pele de vidro e certificação sustentável.</p>
+                        <button onclick="document.getElementById('modal-cad').classList.add('active')" class="w-full border-2 border-constr-dark text-constr-dark font-bold uppercase py-3 hover:bg-constr-dark hover:text-white transition">Agendar Visita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sec 3: Diferenciais -->
+    <section class="py-24 bg-constr-dark text-white relative">
+        <div class="geometric-bg absolute inset-0 opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="font-display text-5xl uppercase mb-16 text-center">Padrão Bonetto</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div data-aos="zoom-in" data-aos-delay="0">
+                    <div class="w-20 h-20 mx-auto border-4 border-constr-gold flex items-center justify-center mb-6 transform rotate-45 group hover:bg-constr-gold transition">
+                        <svg class="w-8 h-8 -rotate-45 group-hover:text-constr-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-xl uppercase mb-3">Engenharia de Ponta</h3>
+                    <p class="text-gray-400 text-sm font-light">Utilizamos métodos construtivos modernos que garantem agilidade, economia estrutural e segurança.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto border-4 border-constr-gold flex items-center justify-center mb-6 transform rotate-45 group hover:bg-constr-gold transition">
+                        <svg class="w-8 h-8 -rotate-45 group-hover:text-constr-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-xl uppercase mb-3">Solidez Financeira</h3>
+                    <p class="text-gray-400 text-sm font-light">Todas as obras são entregues rigorosamente no prazo, com fluxo de caixa 100% garantido.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto border-4 border-constr-gold flex items-center justify-center mb-6 transform rotate-45 group hover:bg-constr-gold transition">
+                        <svg class="w-8 h-8 -rotate-45 group-hover:text-constr-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-xl uppercase mb-3">Sustentabilidade</h3>
+                    <p class="text-gray-400 text-sm font-light">Respeito ao meio ambiente com reuso de água e materiais certificados em todas as etapas da obra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center border-b border-gray-800 pb-10 mb-10">
+            <div>
+                <div class="font-display text-5xl uppercase tracking-tighter leading-none mb-4">
+                    BONETTO<span class="text-constr-gold">.</span>
+                </div>
+                <p class="text-gray-500 max-w-sm mb-4">Empreendimentos que transformam o cenário urbano com qualidade e compromisso.</p>
+                <p class="text-sm font-bold">Comercial: <a href="mailto:contato@bonettoempreendimentos.com.br" class="text-constr-gold hover:underline">contato@bonettoempreendimentos.com.br</a></p>
+            </div>
+            
+            <div class="flex flex-col md:items-end">
+                <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 font-bold">Certificações e Transparência</span>
+                <a href="https://www.reclameaqui.com.br/empresa/bonetto-empreendimentos/sobre/" target="_blank" class="block hover:opacity-80 transition bg-white p-2 rounded">
+                    <img src="selo-ra.png" alt="Selo Reclame Aqui" class="h-12 object-contain" />
+                </a>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-600 font-bold uppercase tracking-widest">
+            © 2026 Bonetto Empreendimentos Imobiliários
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal-login" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-constr-dark/90 backdrop-blur-sm" onclick="document.getElementById('modal-login').classList.remove('active')"></div>
+        <div class="modal-content bg-white w-full max-w-sm p-10 relative z-10 border-t-8 border-constr-gold shadow-2xl">
+            <button onclick="document.getElementById('modal-login').classList.remove('active')" class="absolute top-4 right-4 text-gray-400 hover:text-black font-bold text-xl">&times;</button>
+            <h3 class="font-display text-4xl uppercase mb-6 text-constr-dark">Portal do Cliente</h3>
+            <form onsubmit="event.preventDefault(); alert('Acesso autorizado.'); document.getElementById('modal-login').classList.remove('active');">
+                <input type="text" placeholder="CPF / CNPJ" required class="w-full bg-constr-gray border border-gray-300 p-4 mb-4 outline-none focus:border-constr-gold transition font-bold text-sm">
+                <input type="password" placeholder="Senha" required class="w-full bg-constr-gray border border-gray-300 p-4 mb-8 outline-none focus:border-constr-gold transition font-bold text-sm">
+                <button type="submit" class="w-full bg-constr-dark text-white font-bold uppercase tracking-widest py-4 hover:bg-constr-gold transition">Acessar Boletos</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-cad" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-constr-dark/90 backdrop-blur-sm" onclick="document.getElementById('modal-cad').classList.remove('active')"></div>
+        <div class="modal-content bg-white w-full max-w-md p-10 relative z-10 border-t-8 border-constr-gold shadow-2xl">
+            <button onclick="document.getElementById('modal-cad').classList.remove('active')" class="absolute top-4 right-4 text-gray-400 hover:text-black font-bold text-xl">&times;</button>
+            <h3 class="font-display text-4xl uppercase mb-2 text-constr-dark">Fale com Especialista</h3>
+            <p class="text-sm text-constr-iron mb-6">Cadastre-se para receber o portfólio completo.</p>
+            <form onsubmit="event.preventDefault(); alert('Seu corretor entrará em contato em breve.'); document.getElementById('modal-cad').classList.remove('active');">
+                <input type="text" placeholder="Nome Completo" required class="w-full bg-constr-gray border border-gray-300 p-3 mb-3 outline-none focus:border-constr-gold transition font-bold text-sm">
+                <input type="email" placeholder="E-mail" required class="w-full bg-constr-gray border border-gray-300 p-3 mb-3 outline-none focus:border-constr-gold transition font-bold text-sm">
+                <input type="tel" placeholder="Telefone / WhatsApp" required class="w-full bg-constr-gray border border-gray-300 p-3 mb-8 outline-none focus:border-constr-gold transition font-bold text-sm">
+                <button type="submit" class="w-full bg-constr-gold text-constr-dark font-bold uppercase tracking-widest py-4 hover:bg-constr-dark hover:text-white transition shadow-lg">Enviar Dados</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 50 });</script>
+</body>
+</html>
